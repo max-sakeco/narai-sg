@@ -1,0 +1,253 @@
+/*----------Typography----------*/
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/* Base Styles */
+body {
+  font-display: swap;
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
+  font-family: "Spectral", serif, -apple-system;
+  letter-spacing: 1px;
+  color: white;
+  background: #212720;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/* Typography */
+p, h1, h2, h3, h4 {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 18px;
+  color: #acacac;
+  line-height: 1.8;
+}
+
+/* Font Classes */
+.font-mincho {
+  font-family: serif, -apple-system;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.font-spectral {
+  font-family: "Spectral", serif;
+}
+
+.font-gold {
+  color: #d4af37;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+/* Section Styles */
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pdg-base {
+  padding: 80px 0;
+}
+
+/* Header Styles */
+.headerbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  z-index: 10;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+/* Hero Section */
+.fv-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fv-bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fv-bgimgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fv-bg-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.fv-txbox {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.fv-title {
+  font-size: 42px;
+  line-height: 1.4;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.fv-title-gold {
+  color: #d4af37;
+}
+
+/* Scroll Indicator */
+.fv-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.fv-scroll a {
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 50px;
+  display: inline-block;
+}
+
+.fv-scroll a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 30px;
+  background: white;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top center;
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top center;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(30px) scaleY(0);
+    transform-origin: top center;
+    opacity: 0;
+  }
+}
+
+/* Button Styles */
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #d4af37;
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #c09c2c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fixed Button */
+.fixed-button {
+  position: fixed;
+  bottom: -100px;
+  right: 20px;
+  z-index: 100;
+  transition: all 0.5s ease;
+}
+
+.fixed_btn_active {
+  bottom: 20px;
+}
+
+.fixed-button-link {
+  display: block;
+  padding: 15px 25px;
+  background: #d4af37;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} 
